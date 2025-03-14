@@ -1,0 +1,101 @@
+<!-- demo-requests.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Lecture Requests</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    .message {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.accept {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button.reject {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Demo Lecture Requests</h1>
+
+  <div class="message">
+    <p><strong>Nandu:</strong> REQUESTING FOR A DEMO LECTURE AT 1:00pm - 1:30pm</p>
+    <button class="accept" onclick="acceptRequest('Nandu')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Nandu')">REJECT</button>
+  </div>
+
+  <div class="message">
+    <p><strong>Sanju:</strong> REQUESTING FOR A DEMO LECTURE AT 5:00pm - 5:30pm</p>
+    <button class="accept" onclick="acceptRequest('Sanju')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Sanju')">REJECT</button>
+  </div>
+
+  <div class="message">
+    <p><strong>SHIVA:</strong> REQUESTING FOR A DEMO LECTURE AT 10:00pm - 10:30pm</p>
+    <button class="accept" onclick="acceptRequest('Sanju')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Sanju')">REJECT</button>
+  </div>
+
+  <div class="message">
+    <p><strong>lahari:</strong> REQUESTING FOR A DEMO LECTURE AT 6:00pm - 6:30pm</p>
+    <button class="accept" onclick="acceptRequest('Sanju')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Sanju')">REJECT</button>
+  </div>
+
+  <div class="message">
+    <p><strong>Sai:</strong> REQUESTING FOR A DEMO LECTURE AT 3:00pm - 3:30pm</p>
+    <button class="accept" onclick="acceptRequest('Sanju')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Sanju')">REJECT</button>
+  </div>
+
+  <div class="message">
+    <p><strong>Nithya:</strong> REQUESTING FOR A DEMO LECTURE AT 7:00pm - 7:30pm</p>
+    <button class="accept" onclick="acceptRequest('Sanju')">ACCEPT</button>
+    <button class="reject" onclick="rejectRequest('Sanju')">REJECT</button>
+  </div>
+
+  <script>
+    function acceptRequest(studentName) {
+      alert('Accepted request from ' + studentName);
+      // Perform any additional actions here (e.g., update database)
+    }
+
+    function rejectRequest(studentName) {
+      alert('Rejected request from ' + studentName);
+      // Perform any additional actions here (e.g., update database)
+    }
+  </script>
+
+</body>
+</html>

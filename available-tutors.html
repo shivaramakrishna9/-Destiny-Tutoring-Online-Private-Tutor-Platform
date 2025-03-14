@@ -1,0 +1,71 @@
+<!-- available-tutors.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Tutors</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    div {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      margin-top: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Available Tutors</h1>
+    <p>Tutor: Harini<br>Email: harini@gmail.com</p>
+    <button onclick="requestDemo('harini')">Request for a Demo Lecture</button>
+
+    <p>Tutor: Aishwarya<br>Email: aish@gmail.com</p>
+    <button onclick="requestDemo('aishwarya')">Request for a Demo Lecture</button>
+
+    <p>Tutor: Sheethal<br>Email: sheethal@gmail.com</p>
+    <button onclick="requestDemo('sheethal')">Request for a Demo Lecture</button>
+  </div>
+
+  <script>
+    function requestDemo(tutorName) {
+      alert("Demo Lecture requested for " + tutorName);
+    }
+  </script>
+
+</body>
+</html>

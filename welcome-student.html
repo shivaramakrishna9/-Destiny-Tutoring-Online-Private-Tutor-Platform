@@ -1,0 +1,144 @@
+<!-- welcome-student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Destiny Tutoring</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      margin-top: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="available-tutors.html">
+    <h1>Hello, Welcome to Destiny Tutoring!</h1>
+    <div>
+      <label>Select Class:</label>
+      <select id="classSelect" multiple>
+        <option value="1">1st Class</option>
+        <option value="2">2nd Class</option>
+        <option value="3">3rd Class</option>
+        <option value="4">4th Class</option>
+        <option value="5">5th Class</option>
+        <option value="6">6th Class</option>
+        <option value="7">7th Class</option>
+        <option value="8">8th Class</option>
+        <option value="9">9th Class</option>
+        <option value="10">10th Class</option>
+        <option value="11">11th Class</option>
+        <option value="12">12th Class</option>
+      </select>
+    </div>
+    <div>
+      <label>Select Subject(s):</label>
+      <select id="subjectSelect" multiple></select>
+    </div>
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      var selectedClass = document.getElementById("classSelect").value;
+      var selectedSubjects = Array.from(document.getElementById("subjectSelect").selectedOptions).map(option => option.value);
+
+      // Save selected class and subjects to localStorage for later use
+      localStorage.setItem("selectedClass", selectedClass);
+      localStorage.setItem("selectedSubjects", JSON.stringify(selectedSubjects));
+
+      // Redirect to the available-tutors.html page
+      window.location.href = "available-tutors.html";
+    }
+
+    document.getElementById("classSelect").addEventListener("change", updateSubjects);
+
+    function updateSubjects() {
+      var classSelect = document.getElementById("classSelect");
+      var subjectSelect = document.getElementById("subjectSelect");
+      subjectSelect.innerHTML = "";  // Clear existing options
+
+      var subjects = [];
+
+      switch (classSelect.value) {
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+          subjects = ["Telugu", "Hindi", "English", "Maths", "Science", "Social"];
+          break;
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+        case "10":
+          subjects = ["Telugu", "Hindi", "English", "Maths", "Physics", "Chemistry", "Social"];
+          break;
+        case "11":
+        case "12":
+          subjects = ["MPC", "BIPC", "CEC", "MEC"];
+          break;
+      }
+
+      subjects.forEach(subject => {
+        var option = document.createElement("option");
+        option.value = subject;
+        option.text = subject;
+        subjectSelect.add(option);
+      });
+    }
+  </script>
+
+</body>
+</html>

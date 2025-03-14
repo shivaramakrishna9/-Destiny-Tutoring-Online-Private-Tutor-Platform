@@ -1,0 +1,74 @@
+<!-- registerpage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register">
+        <form action="">
+            <h1>Register</h1>
+            <div class="registerform">
+                <div class="input-form">
+                    <label>First Name<i class='bx bxs-user' ></i></label>
+                    <input type="text" placeholder="Enter First Name" required>
+                </div>
+                <div class="inputform">
+                    <label>Last Name<i class='bx bxs-user' ></i></label>
+                    <input type="text" placeholder="Enter Last Name" required>
+                </div>
+                <div class="inputform">
+                    <label>Date of Birth<i class='bx bxs-user' ></i></label>
+                    <input type="text" placeholder="Enter your Date of Birth" required>
+                </div>
+                <div class="input-form">
+                    <label>E-mail<i class= 'bx bxs-envelope' ></i></label>
+                    <input type="email" placeholder="Enter Email" required>
+                </div>
+                <div class="input-form">
+                    <label>Gender</label>
+                    <input type="radio" name="gender" value="male">
+                    <i class='bx bx-male-sign' ></i>Male
+                    <input type="radio" name="gender" value="female">
+                    <i class='bx bx-female-sign' ></i> Female
+                </div>
+                <div class="input-form">
+                    <label>Phone Number<i class='bx bx-phone' ></i></label>
+                    <input type="Number" placeholder="Enter phone number" required>
+                </div>
+                <div class="input-format">
+                    <label>Password<i class='bx bxs-lock-alt' ></i></label>
+                    <input type="password" placeholder="Enter Password" required>
+                </div>
+                <div class="input-format">
+                    <label>Password<i class='bx bxs-lock-alt' ></i></label>
+                    <input type="password" placeholder="Enter Password" required>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox"> I Agree to all the terms
+            </label>
+            <br>
+            <button class="registerbutton" type="button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
